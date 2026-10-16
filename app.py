@@ -1,4 +1,3 @@
-"""Streamlit converter: 96-well tube-rack scanner CSV -> SciSure-style scan XML.
 
 
 from __future__ import annotations
