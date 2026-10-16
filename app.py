@@ -36,7 +36,7 @@ def normalize_position(value: str) -> tuple[str, int, int]:
 
 
 def check_xml_text(value: str, label: str) -> None:
-    """Reject characters disallowed in XML 1.0 and CDATA terminators."""
+    
     for char in value:
         point = ord(char)
         allowed = (
@@ -50,7 +50,7 @@ def check_xml_text(value: str, label: str) -> None:
 
 
 def load_csv(csv_bytes: bytes, require_full_rack: bool = True) -> tuple[str, list[dict], list[str]]:
-    """Return rack ID, sorted well records, and non-fatal warnings."""
+   
     try:
         content = csv_bytes.decode("utf-8-sig")
     except UnicodeDecodeError as exc:
@@ -133,7 +133,7 @@ def load_csv(csv_bytes: bytes, require_full_rack: bool = True) -> tuple[str, lis
 
 
 def scan_time_from_filename(filename: str) -> str | None:
-    """Parse filename like '10-13-2026.15,37,34(2).csv' -> '20261013 153734'."""
+   
     match = FILENAME_TIME_RE.search(Path(filename).name)
     if not match:
         return None
