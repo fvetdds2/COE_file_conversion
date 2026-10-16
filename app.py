@@ -158,7 +158,7 @@ def validate_scan_time(value: str) -> str:
 
 def build_xml(rack_id: str, records: list[dict], scan_time: str,
               scan_id: int = 1, rack_number: int = 1) -> bytes:
-    """Create the XML layout supplied in the SciSure example."""
+   
     validate_scan_time(scan_time)
     if scan_id < 1 or rack_number < 1:
         raise ConversionError("Scan ID and rack number must be positive integers.")
