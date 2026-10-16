@@ -21,8 +21,6 @@ FILENAME_TIME_RE = re.compile(
 
 
 class ConversionError(ValueError):
-    
-
 def normalize_position(value: str) -> tuple[str, int, int]:
     match = POSITION_RE.fullmatch(value.strip())
     if not match:
